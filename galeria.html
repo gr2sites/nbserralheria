@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galeria de projetos da N&B Serralheria. Veja portões, grades, estruturas metálicas e toldos realizados com excelência.">
+  <title>Galeria - N&B Serralheria</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  
+  <style>
+    /* ============================================================
+       DESIGN SYSTEM: INDUSTRIAL MINIMALISTA MODERNO
+       Cores: Preto (#1a1a1a), Branco (#ffffff), Vermelho (#dc2626)
+    ============================================================ */
+    :root {
+      --primary-color: #dc2626;
+      --dark-color: #1a1a1a;
+      --light-color: #ffffff;
+      --gray-color: #6b7280;
+      --gray-light: #f5f5f5;
+      --gray-border: #e5e5e5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--dark-color);
+      background-color: var(--light-color);
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--light-color);
+      border-bottom: 1px solid var(--gray-border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar {
+      padding: 1rem 0;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--dark-color);
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+
+    .navbar-brand-icon {
+      width: 40px;
+      height: 40px;
+      background-color: var(--dark-color);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--light-color);
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .navbar-brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar-brand-text h1 {
+      font-size: 1rem;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .navbar-brand-text p {
+      font-size: 0.75rem;
+      color: var(--gray-color);
+      margin: 0;
+    }
+
+    .nav-link {
+      color: var(--dark-color);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+      padding: 0.5rem 0;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-color);
+    }
+
+    .nav-link.active {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+    }
+
+    .btn-whatsapp-header {
+      background-color: var(--primary-color);
+      color: var(--light-color);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-whatsapp-header:hover {
+      background-color: #b91c1c;
+      color: var(--light-color);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark-color);
+      color: var(--light-color);
+      padding: 3rem 0 1rem;
+    }
+
+    footer h4 {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    footer a {
+      color: #d1d5db;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      font-size: 0.95rem;
+    }
+
+    footer a:hover {
+      color: var(--primary-color);
+    }
+
+    .footer-section {
+      margin-bottom: 2rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: all 0.2s ease;
+    }
+
+    .social-links a:hover {
+      background-color: var(--primary-color);
+      color: var(--light-color);
+    }
+
+    .footer-divider {
+      height: 1px;
+      background-color: #374151;
+      margin: 2rem 0;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+
+    @media (min-width: 768px) {
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 60px;
+      height: 60px;
+      background-color: #10b981;
+      color: var(--light-color);
+      border: none;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.2s ease;
+      text-decoration: none;
+      z-index: 999;
+      animation: pulse-soft 2s ease-in-out infinite;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #059669;
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes pulse-soft {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+
+    /* Dividers */
+    .divider-red {
+      height: 4px;
+      background-color: var(--primary-color);
+      width: 48px;
+      margin: 1rem 0;
+    }
+
+    .section-divider {
+      height: 4px;
+      background-color: var(--primary-color);
+      margin: 3rem 0;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: var(--light-color);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background-color: #b91c1c;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(220, 38, 38, 0.2);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary-color);
+      color: var(--light-color);
+    }
+
+    /* Gallery */
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      background-color: var(--gray-light);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-item-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+      padding: 1.5rem;
+      color: var(--light-color);
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-item-overlay {
+      transform: translateY(0);
+    }
+
+    .gallery-item-overlay h3 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .gallery-item-overlay p {
+      font-size: 0.8rem;
+      color: #d1d5db;
+      margin: 0;
+    }
+
+    /* Filter Buttons */
+    .filter-btn {
+      background: none;
+      border: 1px solid var(--gray-border);
+      padding: 0.6rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      color: var(--dark-color);
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      color: var(--light-color);
+    }
+
+    /* Modal */
+    .modal-gallery {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal-gallery.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-gallery-content {
+      background-color: var(--light-color);
+      padding: 1.5rem;
+      border-radius: 8px;
+      max-width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      animation: slideUp 0.3s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--dark-color);
+      transition: color 0.2s ease;
+      z-index: 10;
+    }
+
+    .modal-close:hover {
+      color: var(--primary-color);
+    }
+
+    .modal-image {
+      width: 100%;
+      max-height: 500px;
+      object-fit: contain;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+
+    /* Animations */
+    .fade-in {
+      animation: fadeInUp 0.6s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar-brand-text p {
+        display: none;
+      }
+
+      .nav-link {
+        padding: 0.75rem 0;
+      }
+
+      .whatsapp-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+      }
+
+      .modal-gallery-content {
+        max-width: 95%;
+        padding: 1rem;
+      }
+
+      .gallery-item img {
+        height: 220px;
+      }
+    }
+
+    /* Utility */
+    .text-center { text-align: center; }
+    .mb-5 { margin-bottom: 3rem; }
+    .py-5 { padding: 3rem 0; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .fw-bold { font-weight: 700; }
+    .lead { font-size: 1.2rem; }
+    .bg-dark { background-color: var(--dark-color); color: var(--light-color); }
+    .bg-white { background-color: var(--light-color); }
+    .bg-light { background-color: var(--gray-light); }
+    .text-white { color: white; }
+    .text-muted { color: var(--gray-color); }
+    .text-danger { color: var(--primary-color); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .row { display: flex; flex-wrap: wrap; margin: 0 -0.75rem; }
+    .col-md-6, .col-lg-4 { padding: 0 0.75rem; margin-bottom: 1.5rem; }
+    .col-md-6 { flex: 0 0 auto; width: 50%; }
+    .col-lg-4 { flex: 0 0 auto; width: 33.333%; }
+    .d-flex { display: flex; }
+    .justify-content-center { justify-content: center; }
+    .flex-wrap { flex-wrap: wrap; }
+    .gap-2 { gap: 0.75rem; }
+    .gap-3 { gap: 1rem; }
+    .ms-auto { margin-left: auto; }
+    
+    @media (max-width: 768px) {
+      .col-md-6, .col-lg-4 { width: 100%; }
+      .container { padding: 0 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <div class="navbar-brand-icon">N&B</div>
+          <div class="navbar-brand-text">
+            <h1>N&B Serralheria</h1>
+            <p>Soluções Metálicas</p>
+          </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" id="menuToggle">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <div class="navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+            <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
+            <li class="nav-item"><a href="galeria.html" class="nav-link active">Galeria</a></li>
+            <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+            <li class="nav-item"><a href="https://wa.me/5516994234482" target="_blank" class="btn-whatsapp-header">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="py-5 bg-dark text-white">
+    <div class="container">
+      <h1 class="fw-bold mb-3" style="font-size: 2.5rem;">Galeria de Projetos</h1>
+      <div class="divider-red mb-3"></div>
+      <p class="lead">Conheça alguns dos nossos trabalhos realizados com excelência e profissionalismo.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Gallery Section -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <!-- Filter Buttons -->
+      <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="portoes">Portões</button>
+        <button class="filter-btn" data-filter="grades">Grades</button>
+        <button class="filter-btn" data-filter="estruturas">Estruturas Metálicas</button>
+        <button class="filter-btn" data-filter="toldos">Toldos</button>
+        <button class="filter-btn" data-filter="escadas">Escadas</button>
+        <button class="filter-btn" data-filter="moveis">Móveis em Aço</button>
+      </div>
+
+      <!-- Gallery Grid - 48 imagens -->
+      <div class="row" id="galleryGrid">
+        <!-- ======================================================== -->
+        <!-- PORTÕES - 8 imagens -->
+        <!-- ======================================================== -->
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão Residencial Moderno 01" data-description="Portão em ferro com design geométrico e acabamento eletrostático.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+01" alt="Portão Residencial Moderno 01">
+            <div class="gallery-item-overlay"><h3>Portão Residencial Moderno 01</h3><p>Portões</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão Residencial Moderno 02" data-description="Portão automático com design contemporâneo e linhas retas.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+02" alt="Portão Residencial Moderno 02">
+            <div class="gallery-item-overlay"><h3>Portão Residencial Moderno 02</h3><p>Portões</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão Industrial 01" data-description="Portão de enrolar para galpão industrial com alta durabilidade.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+03" alt="Portão Industrial 01">
+            <div class="gallery-item-overlay"><h3>Portão Industrial 01</h3><p>Portões</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão de Correr" data-description="Portão de correr em aço carbono com pintura powder coating.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+04" alt="Portão de Correr">
+            <div class="gallery-item-overlay"><h3>Portão de Correr</h3><p>Portões</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão Basculante" data-description="Portão basculante com sistema de contrapeso e acabamento premium.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+05" alt="Portão Basculante">
+            <div class="gallery-item-overlay"><h3>Portão Basculante</h3><p>Portões</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão Residencial Clássico" data-description="Design clássico com detalhes em ferro forjado.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+06" alt="Portão Residencial Clássico">
+            <div class="gallery-item-overlay"><h3>Portão Residencial Clássico</h3><p>Portões</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão Condomínio" data-description="Portão para condomínio com design elegante e seguro.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+07" alt="Portão Condomínio">
+            <div class="gallery-item-overlay"><h3>Portão Condomínio</h3><p>Portões</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão Pedonal" data-description="Portão pedonal integrado com design moderno.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+08" alt="Portão Pedonal">
+            <div class="gallery-item-overlay"><h3>Portão Pedonal</h3><p>Portões</p></div>
+          </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- GRADES - 8 imagens -->
+        <!-- ======================================================== -->
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade de Proteção 01" data-description="Grade para janelas com design discreto e alta segurança.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+01" alt="Grade de Proteção 01">
+            <div class="gallery-item-overlay"><h3>Grade de Proteção 01</h3><p>Grades</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade Residencial" data-description="Grade residencial com acabamento em pintura eletrostática.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+02" alt="Grade Residencial">
+            <div class="gallery-item-overlay"><h3>Grade Residencial</h3><p>Grades</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade Ornamental" data-description="Grade ornamental com detalhes artísticos em ferro.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+03" alt="Grade Ornamental">
+            <div class="gallery-item-overlay"><h3>Grade Ornamental</h3><p>Grades</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade para Varanda" data-description="Grade para varanda com design moderno e seguro.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+04" alt="Grade para Varanda">
+            <div class="gallery-item-overlay"><h3>Grade para Varanda</h3><p>Grades</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade para Escada" data-description="Grade de proteção para escadas com design minimalista.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+05" alt="Grade para Escada">
+            <div class="gallery-item-overlay"><h3>Grade para Escada</h3><p>Grades</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade Industrial" data-description="Grade de proteção para áreas industriais.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+06" alt="Grade Industrial">
+            <div class="gallery-item-overlay"><h3>Grade Industrial</h3><p>Grades</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade Basculante" data-description="Grade basculante para proteção de janelas.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+07" alt="Grade Basculante">
+            <div class="gallery-item-overlay"><h3>Grade Basculante</h3><p>Grades</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade Corta-Fogo" data-description="Grade corta-fogo certificada para segurança.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+08" alt="Grade Corta-Fogo">
+            <div class="gallery-item-overlay"><h3>Grade Corta-Fogo</h3><p>Grades</p></div>
+          </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- ESTRUTURAS METÁLICAS - 8 imagens -->
+        <!-- ======================================================== -->
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Estrutura Galpão 01" data-description="Estrutura metálica para galpão de 500m².">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+01" alt="Estrutura Galpão 01">
+            <div class="gallery-item-overlay"><h3>Estrutura Galpão 01</h3><p>Estruturas Metálicas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Mezanino 01" data-description="Mezanino metálico para otimização de espaço comercial.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+02" alt="Mezanino 01">
+            <div class="gallery-item-overlay"><h3>Mezanino 01</h3><p>Estruturas Metálicas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Cobertura Metálica" data-description="Cobertura metálica para área de lazer.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+03" alt="Cobertura Metálica">
+            <div class="gallery-item-overlay"><h3>Cobertura Metálica</h3><p>Estruturas Metálicas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Estrutura Comercial" data-description="Estrutura para loja com mezanino e escada.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+04" alt="Estrutura Comercial">
+            <div class="gallery-item-overlay"><h3>Estrutura Comercial</h3><p>Estruturas Metálicas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Passarela Metálica" data-description="Passarela metálica para acesso seguro.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+05" alt="Passarela Metálica">
+            <div class="gallery-item-overlay"><h3>Passarela Metálica</h3><p>Estruturas Metálicas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Plataforma Elevatória" data-description="Plataforma em estrutura metálica para máquinas.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+06" alt="Plataforma Elevatória">
+            <div class="gallery-item-overlay"><h3>Plataforma Elevatória</h3><p>Estruturas Metálicas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Estrutura para Telhado" data-description="Estrutura metálica para telhado industrial.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+07" alt="Estrutura para Telhado">
+            <div class="gallery-item-overlay"><h3>Estrutura para Telhado</h3><p>Estruturas Metálicas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Viga Metálica" data-description="Viga metálica para reforço estrutural.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+08" alt="Viga Metálica">
+            <div class="gallery-item-overlay"><h3>Viga Metálica</h3><p>Estruturas Metálicas</p></div>
+          </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- TOLDOS - 8 imagens -->
+        <!-- ======================================================== -->
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="toldos">
+          <div class="gallery-item" data-title="Toldo Policarbonato 01" data-description="Toldo em policarbonato alveolar com proteção UV.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+01" alt="Toldo Policarbonato 01">
+            <div class="gallery-item-overlay"><h3>Toldo Policarbonato 01</h3><p>Toldos</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="toldos">
+          <div class="gallery-item" data-title="Cobertura Garagem" data-description="Cobertura para garagem em policarbonato.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+02" alt="Cobertura Garagem">
+            <div class="gallery-item-overlay"><h3>Cobertura Garagem</h3><p>Toldos</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="toldos">
+          <div class="gallery-item" data-title="Toldo Retrátil" data-description="Toldo retrátil para áreas externas.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+03" alt="Toldo Retrátil">
+            <div class="gallery-item-overlay"><h3>Toldo Retrátil</h3><p>Toldos</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="toldos">
+          <div class="gallery-item" data-title="Cobertura Churrasqueira" data-description="Cobertura para churrasqueira em policarbonato.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+04" alt="Cobertura Churrasqueira">
+            <div class="gallery-item-overlay"><h3>Cobertura Churrasqueira</h3><p>Toldos</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="toldos">
+          <div class="gallery-item" data-title="Toldo Fixo" data-description="Toldo fixo para entrada de estabelecimento.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+05" alt="Toldo Fixo">
+            <div class="gallery-item-overlay"><h3>Toldo Fixo</h3><p>Toldos</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="toldos">
+          <div class="gallery-item" data-title="Cobertura Piscina" data-description="Cobertura para área de piscina.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+06" alt="Cobertura Piscina">
+            <div class="gallery-item-overlay"><h3>Cobertura Piscina</h3><p>Toldos</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="toldos">
+          <div class="gallery-item" data-title="Toldo Curvo" data-description="Toldo com design curvo e estrutura diferenciada.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+07" alt="Toldo Curvo">
+            <div class="gallery-item-overlay"><h3>Toldo Curvo</h3><p>Toldos</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="toldos">
+          <div class="gallery-item" data-title="Cobertura Acessos" data-description="Cobertura para acessos e calçadas.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+08" alt="Cobertura Acessos">
+            <div class="gallery-item-overlay"><h3>Cobertura Acessos</h3><p>Toldos</p></div>
+          </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- ESCADAS - 8 imagens -->
+        <!-- ======================================================== -->
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada Metálica 01" data-description="Escada industrial com corrimão e antiderrapante.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+01" alt="Escada Metálica 01">
+            <div class="gallery-item-overlay"><h3>Escada Metálica 01</h3><p>Escadas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada Caracol" data-description="Escada caracol em aço para ambientes compactos.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+02" alt="Escada Caracol">
+            <div class="gallery-item-overlay"><h3>Escada Caracol</h3><p>Escadas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada Residencial" data-description="Escada residencial com design moderno.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+03" alt="Escada Residencial">
+            <div class="gallery-item-overlay"><h3>Escada Residencial</h3><p>Escadas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada para Mezanino" data-description="Escada de acesso para mezanino com estrutura leve.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+04" alt="Escada para Mezanino">
+            <div class="gallery-item-overlay"><h3>Escada para Mezanino</h3><p>Escadas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada Marinheiro" data-description="Escada tipo marinheiro para acesso vertical.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+05" alt="Escada Marinheiro">
+            <div class="gallery-item-overlay"><h3>Escada Marinheiro</h3><p>Escadas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada L" data-description="Escada em formato L para otimizar espaço.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+06" alt="Escada L">
+            <div class="gallery-item-overlay"><h3>Escada L</h3><p>Escadas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada U" data-description="Escada em formato U com patamar intermediário.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+07" alt="Escada U">
+            <div class="gallery-item-overlay"><h3>Escada U</h3><p>Escadas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada Reta" data-description="Escada reta com acabamento em aço escovado.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+08" alt="Escada Reta">
+            <div class="gallery-item-overlay"><h3>Escada Reta</h3><p>Escadas</p></div>
+          </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- MÓVEIS EM AÇO - 8 imagens -->
+        <!-- ======================================================== -->
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="moveis">
+          <div class="gallery-item" data-title="Mesa em Aço" data-description="Mesa industrial em aço para escritório.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+01" alt="Mesa em Aço">
+            <div class="gallery-item-overlay"><h3>Mesa em Aço</h3><p>Móveis em Aço</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="moveis">
+          <div class="gallery-item" data-title="Estante Metálica" data-description="Estante industrial para arquivo e estoque.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+02" alt="Estante Metálica">
+            <div class="gallery-item-overlay"><h3>Estante Metálica</h3><p>Móveis em Aço</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="moveis">
+          <div class="gallery-item" data-title="Armário em Aço" data-description="Armário para ferramentas com portas.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+03" alt="Armário em Aço">
+            <div class="gallery-item-overlay"><h3>Armário em Aço</h3><p>Móveis em Aço</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="moveis">
+          <div class="gallery-item" data-title="Banco Metálico" data-description="Banco em aço para áreas externas.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+04" alt="Banco Metálico">
+            <div class="gallery-item-overlay"><h3>Banco Metálico</h3><p>Móveis em Aço</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="moveis">
+          <div class="gallery-item" data-title="Cadeira Industrial" data-description="Cadeira ergonômica em aço para indústria.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+05" alt="Cadeira Industrial">
+            <div class="gallery-item-overlay"><h3>Cadeira Industrial</h3><p>Móveis em Aço</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="moveis">
+          <div class="gallery-item" data-title="Balcão Metálico" data-description="Balcão para recepção em aço.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+06" alt="Balcão Metálico">
+            <div class="gallery-item-overlay"><h3>Balcão Metálico</h3><p>Móveis em Aço</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="moveis">
+          <div class="gallery-item" data-title="Rack em Aço" data-description="Rack para equipamentos eletrônicos.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+07" alt="Rack em Aço">
+            <div class="gallery-item-overlay"><h3>Rack em Aço</h3><p>Móveis em Aço</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-item-card" data-category="moveis">
+          <div class="gallery-item" data-title="Carrinho Metálico" data-description="Carrinho para transporte de materiais.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+08" alt="Carrinho Metálico">
+            <div class="gallery-item-overlay"><h3>Carrinho Metálico</h3><p>Móveis em Aço</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contador de imagens -->
+      <div class="text-center mt-4">
+        <p class="text-muted">Total: <span id="imageCount">48</span> projetos em nossa galeria</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- CTA Section -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" style="font-size: 1.8rem;">Gostou de algum projeto?</h2>
+      <p class="lead text-muted mb-4">Entre em contato conosco para discutir seu projeto e receber um orçamento personalizado.</p>
+      <a href="https://wa.me/5516994234482" target="_blank" class="btn btn-primary">Solicitar Orçamento</a>
+    </div>
+  </section>
+
+  <!-- Gallery Modal -->
+  <div class="modal-gallery" id="galleryModal">
+    <div class="modal-gallery-content">
+      <button class="modal-close" id="modalCloseBtn"><i class="bi bi-x"></i></button>
+      <img id="modalImage" src="" alt="" class="modal-image">
+      <div>
+        <span class="badge bg-danger mb-2" id="modalCategory" style="background-color: var(--primary-color);">Categoria</span>
+        <h3 id="modalTitle" class="h4 mb-2"></h3>
+        <p id="modalDescription" class="text-muted"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-4 footer-section">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <div class="navbar-brand-icon">N&B</div>
+            <h4 class="m-0">N&B Serralheria</h4>
+          </div>
+          <p class="text-muted mb-3">Soluções metálicas profissionais para sua casa e negócio.</p>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/5516994234482" target="_blank"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 footer-section">
+          <h4>Links Rápidos</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 footer-section">
+          <h4>Contato</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-telephone text-danger"></i> <span>(16) 99423-4482</span></li>
+            <li class="mb-2"><i class="bi bi-chat-dots text-danger"></i> <a href="https://wa.me/5516994234482" target="_blank">WhatsApp</a></li>
+            <li class="mb-2"><i class="bi bi-envelope text-danger"></i> <span>contato@nbserralheria.com.br</span></li>
+            <li><i class="bi bi-geo-alt text-danger"></i> <span>São Paulo, SP</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 N&B Serralheria. Todos os direitos reservados.</p>
+        <div class="d-flex gap-3"><a href="#">Política de Privacidade</a><a href="#">Termos de Serviço</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/5516994234482" target="_blank" class="whatsapp-button" title="Clique para conversar conosco no WhatsApp">
+    <i class="bi bi-chat-dots"></i>
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Menu Hamburguer
+    const menuToggle = document.getElementById('menuToggle');
+    const navbarCollapse = document.getElementById('navbarCollapse');
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navbarCollapse.classList.toggle('show');
+      });
+      navbarCollapse.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => navbarCollapse.classList.remove('show'));
+      });
+    }
+
+    // ============================================================
+    // FILTRO DA GALERIA
+    // ============================================================
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryCards = document.querySelectorAll('.gallery-item-card');
+    const imageCountSpan = document.getElementById('imageCount');
+
+    function updateImageCount() {
+      const visibleCards = Array.from(galleryCards).filter(card => card.style.display !== 'none');
+      if (imageCountSpan) imageCountSpan.textContent = visibleCards.length;
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+        
+        filterBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        let visibleCount = 0;
+        galleryCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'block';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        if (imageCountSpan) imageCountSpan.textContent = visibleCount;
+      });
+    });
+
+    // ============================================================
+    // MODAL DA GALERIA
+    // ============================================================
+    const modal = document.getElementById('galleryModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalCategory = document.getElementById('modalCategory');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+    function getCategoryName(category) {
+      const names = {
+        'portoes': 'Portões',
+        'grades': 'Grades',
+        'estruturas': 'Estruturas Metálicas',
+        'toldos': 'Toldos',
+        'escadas': 'Escadas',
+        'moveis': 'Móveis em Aço'
+      };
+      return names[category] || category;
+    }
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', function() {
+        const title = this.getAttribute('data-title');
+        const description = this.getAttribute('data-description');
+        const parentCard = this.closest('.gallery-item-card');
+        const category = parentCard ? parentCard.getAttribute('data-category') : '';
+        const imgSrc = this.querySelector('img')?.src || '';
+        
+        modalImage.src = imgSrc;
+        modalTitle.textContent = title || 'Projeto';
+        modalCategory.textContent = getCategoryName(category);
+        modalDescription.textContent = description || 'Detalhes do projeto';
+        
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    modalCloseBtn?.addEventListener('click', closeModal);
+    modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal?.classList.contains('active')) closeModal(); });
+  </script>
+</body>
+</html>
