@@ -15,7 +15,6 @@
   <style>
     /* ============================================================
        DESIGN SYSTEM: INDUSTRIAL MINIMALISTA MODERNO
-       Cores: Preto (#1a1a1a), Branco (#ffffff), Vermelho (#dc2626)
     ============================================================ */
     :root {
       --primary-color: #dc2626;
@@ -26,15 +25,8 @@
       --gray-border: #e5e5e5;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -53,10 +45,7 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
 
-    .navbar {
-      padding: 1rem 0;
-    }
-
+    .navbar { padding: 1rem 0; }
     .navbar-brand {
       display: flex;
       align-items: center;
@@ -64,9 +53,7 @@
       text-decoration: none;
       color: var(--dark-color);
       font-weight: bold;
-      font-size: 1.25rem;
     }
-
     .navbar-brand-icon {
       width: 40px;
       height: 40px;
@@ -79,23 +66,8 @@
       font-weight: bold;
       font-size: 1rem;
     }
-
-    .navbar-brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .navbar-brand-text h1 {
-      font-size: 1rem;
-      margin: 0;
-      line-height: 1.2;
-    }
-
-    .navbar-brand-text p {
-      font-size: 0.75rem;
-      color: var(--gray-color);
-      margin: 0;
-    }
+    .navbar-brand-text h1 { font-size: 1rem; margin: 0; line-height: 1.2; }
+    .navbar-brand-text p { font-size: 0.75rem; color: var(--gray-color); margin: 0; }
 
     .nav-link {
       color: var(--dark-color);
@@ -105,11 +77,7 @@
       transition: color 0.2s ease;
       padding: 0.5rem 0;
     }
-
-    .nav-link:hover {
-      color: var(--primary-color);
-    }
-
+    .nav-link:hover { color: var(--primary-color); }
     .nav-link.active {
       color: var(--primary-color);
       border-bottom: 2px solid var(--primary-color);
@@ -118,23 +86,16 @@
     .btn-whatsapp-header {
       background-color: var(--primary-color);
       color: var(--light-color);
-      border: none;
       padding: 0.5rem 1rem;
       border-radius: 4px;
       font-weight: 600;
       font-size: 0.9rem;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
       text-decoration: none;
       display: inline-block;
     }
+    .btn-whatsapp-header:hover { background-color: #b91c1c; }
 
-    .btn-whatsapp-header:hover {
-      background-color: #b91c1c;
-      color: var(--light-color);
-    }
-
-    /* Menu Hamburguer - igual ao index.html */
+    /* Menu Hamburguer */
     .navbar-toggler {
       background: none;
       border: 1px solid var(--gray-border);
@@ -143,37 +104,15 @@
       cursor: pointer;
       display: none;
     }
-
-    .navbar-toggler i {
-      font-size: 1.2rem;
-      color: var(--dark-color);
-    }
+    .navbar-toggler i { font-size: 1.2rem; color: var(--dark-color); }
 
     @media (max-width: 768px) {
-      .navbar-toggler {
-        display: block;
-      }
-      .navbar-collapse {
-        display: none;
-        width: 100%;
-      }
-      .navbar-collapse.show {
-        display: block;
-      }
-      .navbar-nav {
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 1rem 0;
-      }
-      .nav-link {
-        display: block;
-        padding: 0.6rem 0;
-      }
-      .btn-whatsapp-header {
-        display: inline-block;
-        text-align: center;
-        margin-top: 0.5rem;
-      }
+      .navbar-toggler { display: block; }
+      .navbar-collapse { display: none; width: 100%; }
+      .navbar-collapse.show { display: block; }
+      .navbar-nav { flex-direction: column; gap: 0.5rem; padding: 1rem 0; }
+      .nav-link { display: block; padding: 0.6rem 0; }
+      .btn-whatsapp-header { display: inline-block; text-align: center; margin-top: 0.5rem; }
     }
 
     /* Footer */
@@ -182,34 +121,11 @@
       color: var(--light-color);
       padding: 3rem 0 1rem;
     }
-
-    footer h4 {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-      font-weight: 600;
-    }
-
-    footer a {
-      color: #d1d5db;
-      text-decoration: none;
-      transition: color 0.2s ease;
-      font-size: 0.95rem;
-    }
-
-    footer a:hover {
-      color: var(--primary-color);
-    }
-
-    .footer-section {
-      margin-bottom: 2rem;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
+    footer h4 { font-size: 1.1rem; margin-bottom: 1.5rem; font-weight: 600; }
+    footer a { color: #d1d5db; text-decoration: none; transition: color 0.2s ease; font-size: 0.95rem; }
+    footer a:hover { color: var(--primary-color); }
+    .footer-section { margin-bottom: 2rem; }
+    .social-links { display: flex; gap: 1rem; margin-bottom: 1rem; }
     .social-links a {
       width: 40px;
       height: 40px;
@@ -220,33 +136,10 @@
       background-color: rgba(255, 255, 255, 0.1);
       transition: all 0.2s ease;
     }
-
-    .social-links a:hover {
-      background-color: var(--primary-color);
-      color: var(--light-color);
-    }
-
-    .footer-divider {
-      height: 1px;
-      background-color: #374151;
-      margin: 2rem 0;
-    }
-
-    .footer-bottom {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      font-size: 0.9rem;
-      color: #9ca3af;
-    }
-
-    @media (min-width: 768px) {
-      .footer-bottom {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-    }
+    .social-links a:hover { background-color: var(--primary-color); color: var(--light-color); }
+    .footer-divider { height: 1px; background-color: #374151; margin: 2rem 0; }
+    .footer-bottom { display: flex; flex-direction: column; gap: 1rem; font-size: 0.9rem; color: #9ca3af; }
+    @media (min-width: 768px) { .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; } }
 
     /* WhatsApp Button */
     .whatsapp-button {
@@ -257,10 +150,8 @@
       height: 60px;
       background-color: #10b981;
       color: var(--light-color);
-      border: none;
       border-radius: 50%;
       font-size: 1.5rem;
-      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -270,31 +161,12 @@
       z-index: 999;
       animation: pulse-soft 2s ease-in-out infinite;
     }
-
-    .whatsapp-button:hover {
-      background-color: #059669;
-      transform: scale(1.1);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    @keyframes pulse-soft {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.8; }
-    }
+    .whatsapp-button:hover { background-color: #059669; transform: scale(1.1); }
+    @keyframes pulse-soft { 0%, 100% { opacity: 1; } 50% { opacity: 0.8; } }
 
     /* Dividers */
-    .divider-red {
-      height: 4px;
-      background-color: var(--primary-color);
-      width: 48px;
-      margin: 1rem 0;
-    }
-
-    .section-divider {
-      height: 4px;
-      background-color: var(--primary-color);
-      margin: 3rem 0;
-    }
+    .divider-red { height: 4px; background-color: var(--primary-color); width: 48px; margin: 1rem 0; }
+    .section-divider { height: 4px; background-color: var(--primary-color); margin: 3rem 0; }
 
     /* Buttons */
     .btn-primary {
@@ -305,18 +177,10 @@
       border-radius: 4px;
       font-weight: 600;
       font-size: 0.95rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
       text-decoration: none;
       display: inline-block;
     }
-
-    .btn-primary:hover {
-      background-color: #b91c1c;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(220, 38, 38, 0.2);
-    }
-
+    .btn-primary:hover { background-color: #b91c1c; transform: translateY(-2px); }
     .btn-outline {
       background-color: transparent;
       color: var(--primary-color);
@@ -325,14 +189,23 @@
       border-radius: 4px;
       font-weight: 600;
       font-size: 0.95rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
       text-decoration: none;
       display: inline-block;
     }
+    .btn-outline:hover { background-color: var(--primary-color); color: var(--light-color); }
 
-    .btn-outline:hover {
+    /* Filter Buttons */
+    .filter-btn {
+      background: none;
+      border: 1px solid var(--gray-border);
+      padding: 0.5rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    .filter-btn.active, .filter-btn:hover {
       background-color: var(--primary-color);
+      border-color: var(--primary-color);
       color: var(--light-color);
     }
 
@@ -345,18 +218,13 @@
       transition: all 0.3s ease;
       cursor: pointer;
     }
-
     .gallery-item img {
       width: 100%;
-      height: 280px;
+      height: 260px;
       object-fit: cover;
       transition: transform 0.3s ease;
     }
-
-    .gallery-item:hover img {
-      transform: scale(1.05);
-    }
-
+    .gallery-item:hover img { transform: scale(1.05); }
     .gallery-item-overlay {
       position: absolute;
       bottom: 0;
@@ -368,38 +236,9 @@
       transform: translateY(100%);
       transition: transform 0.3s ease;
     }
-
-    .gallery-item:hover .gallery-item-overlay {
-      transform: translateY(0);
-    }
-
-    .gallery-item-overlay h3 {
-      font-size: 0.9rem;
-      margin-bottom: 0.2rem;
-    }
-
-    .gallery-item-overlay p {
-      font-size: 0.75rem;
-      color: #d1d5db;
-      margin: 0;
-    }
-
-    /* Filter Buttons */
-    .filter-btn {
-      background: none;
-      border: 1px solid var(--gray-border);
-      padding: 0.5rem 1.5rem;
-      border-radius: 4px;
-      font-weight: 500;
-      transition: all 0.2s ease;
-    }
-
-    .filter-btn.active,
-    .filter-btn:hover {
-      background-color: var(--primary-color);
-      border-color: var(--primary-color);
-      color: var(--light-color);
-    }
+    .gallery-item:hover .gallery-item-overlay { transform: translateY(0); }
+    .gallery-item-overlay h3 { font-size: 0.9rem; margin-bottom: 0.2rem; }
+    .gallery-item-overlay p { font-size: 0.75rem; color: #d1d5db; margin: 0; }
 
     /* Modal */
     .modal-gallery {
@@ -411,20 +250,8 @@
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.9);
-      animation: fadeIn 0.3s ease;
     }
-
-    .modal-gallery.active {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
+    .modal-gallery.active { display: flex; align-items: center; justify-content: center; }
     .modal-gallery-content {
       background-color: var(--light-color);
       padding: 1.5rem;
@@ -433,20 +260,7 @@
       max-height: 90vh;
       overflow-y: auto;
       position: relative;
-      animation: slideUp 0.3s ease;
     }
-
-    @keyframes slideUp {
-      from {
-        transform: translateY(50px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
     .modal-close {
       position: absolute;
       top: 0.75rem;
@@ -456,91 +270,40 @@
       font-size: 1.8rem;
       cursor: pointer;
       color: var(--dark-color);
-      transition: color 0.2s ease;
-      z-index: 10;
     }
-
-    .modal-close:hover {
-      color: var(--primary-color);
-    }
-
-    .modal-image {
-      width: 100%;
-      max-height: 500px;
-      object-fit: contain;
-      border-radius: 4px;
-      margin-bottom: 1rem;
-    }
-
-    /* Animations */
-    .fade-in {
-      animation: fadeInUp 0.6s ease;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+    .modal-close:hover { color: var(--primary-color); }
+    .modal-image { width: 100%; max-height: 500px; object-fit: contain; border-radius: 4px; margin-bottom: 1rem; }
 
     /* Responsivo */
-    @media (max-width: 992px) {
-      .gallery-item img {
-        height: 250px;
-      }
-    }
-
+    @media (max-width: 992px) { .gallery-item img { height: 240px; } }
     @media (max-width: 768px) {
-      .gallery-item img {
-        height: 220px;
-      }
-      .modal-gallery-content {
-        max-width: 95%;
-        padding: 1rem;
-      }
-      .filter-btn {
-        padding: 0.4rem 1rem;
-        font-size: 0.8rem;
-      }
+      .gallery-item img { height: 220px; }
+      .modal-gallery-content { max-width: 95%; padding: 1rem; }
+      .filter-btn { padding: 0.4rem 1rem; font-size: 0.8rem; }
     }
-
     @media (max-width: 576px) {
-      .gallery-item-overlay {
-        transform: translateY(0);
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-        padding: 0.75rem;
-      }
-      .whatsapp-button {
-        width: 50px;
-        height: 50px;
-        font-size: 1.25rem;
-      }
+      .gallery-item-overlay { transform: translateY(0); background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent); padding: 0.75rem; }
+      .whatsapp-button { width: 50px; height: 50px; font-size: 1.25rem; }
     }
 
     /* Utility */
-    .text-center { text-align: center; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
     @media (max-width: 768px) { .container { padding: 0 1rem; } }
     .bg-dark { background-color: var(--dark-color); color: var(--light-color); }
     .bg-white { background-color: var(--light-color); }
     .bg-light { background-color: var(--gray-light); }
-    .text-white { color: white; }
-    .text-muted { color: var(--gray-color); }
     .py-5 { padding: 3rem 0; }
     .mb-5 { margin-bottom: 3rem; }
     .mx-auto { margin-left: auto; margin-right: auto; }
     .fw-bold { font-weight: 700; }
     .lead { font-size: 1.2rem; }
+    .text-center { text-align: center; }
+    .text-muted { color: var(--gray-color); }
   </style>
 </head>
 <body>
 
-  <!-- Header - EXATAMENTE IGUAL AO INDEX.HTML -->
+  <!-- Header -->
   <header>
     <nav class="navbar navbar-expand-md">
       <div class="container">
@@ -558,19 +321,11 @@
 
         <div class="navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ms-auto gap-3">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">Início</a>
-            </li>
-            <li class="nav-item">
-              <a href="sobre.html" class="nav-link">Sobre Nós</a>
-            </li>
-            <li class="nav-item">
-              <a href="galeria.html" class="nav-link active">Galeria</a>
-            </li>
-            <li class="nav-item">
-              <a href="contato.html" class="nav-link">Contato</a>
-            </li>
-           
+            <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+            <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
+            <li class="nav-item"><a href="galeria.html" class="nav-link active">Galeria</a></li>
+            <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+            <li class="nav-item"><a href="https://wa.me/5516994234482" target="_blank" class="btn-whatsapp-header">WhatsApp</a></li>
           </ul>
         </div>
       </div>
@@ -580,7 +335,7 @@
   <!-- Hero Section -->
   <section class="py-5 bg-dark text-white">
     <div class="container">
-      <h1 class="display-4 fw-bold mb-3">Galeria de Projetos</h1>
+      <h1 class="fw-bold mb-3" style="font-size: 2.5rem;">Galeria de Projetos</h1>
       <div class="divider-red mb-3"></div>
       <p class="lead">Conheça alguns dos nossos trabalhos realizados com excelência e profissionalismo.</p>
     </div>
@@ -592,74 +347,315 @@
   <section class="py-5 bg-white">
     <div class="container">
       <!-- Filter Buttons -->
-    
-      <!-- Gallery Grid -->
+     
+
+      <!-- Gallery Grid - 48 imagens (6 categorias x 8 imagens) -->
       <div class="row g-4" id="galleryGrid">
-        <!-- Item 1 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="gallery-item" data-category="portoes" data-title="Portão Residencial Moderno" data-description="Portão em ferro com design geométrico e acabamento premium.">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663086115249/FVJg8zKsxpkML3aNUkgoB7/galeria-portao-mptd8XfaE5QBVqK59TjLNd.webp" alt="Portão Residencial Moderno">
-            <div class="gallery-item-overlay">
-              <h3>Portão Residencial Moderno</h3>
-              <p>Portões</p>
-            </div>
+        
+        <!-- ========== PORTÕES (8 imagens) ========== -->
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão Residencial Moderno 01" data-description="Portão em ferro com design geométrico e acabamento premium.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+01" alt="Portão 01">
+            <div class="gallery-item-overlay"><h3>Portão Residencial 01</h3><p>Portões</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão Residencial Moderno 02" data-description="Portão automático com design contemporâneo.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+02" alt="Portão 02">
+            <div class="gallery-item-overlay"><h3>Portão Residencial 02</h3><p>Portões</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão Industrial 01" data-description="Portão de enrolar para galpão industrial.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+03" alt="Portão 03">
+            <div class="gallery-item-overlay"><h3>Portão Industrial</h3><p>Portões</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão de Correr" data-description="Portão de correr em aço carbono.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+04" alt="Portão 04">
+            <div class="gallery-item-overlay"><h3>Portão de Correr</h3><p>Portões</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão Basculante" data-description="Portão basculante com sistema de contrapeso.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+05" alt="Portão 05">
+            <div class="gallery-item-overlay"><h3>Portão Basculante</h3><p>Portões</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão Clássico" data-description="Design clássico com detalhes em ferro forjado.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+06" alt="Portão 06">
+            <div class="gallery-item-overlay"><h3>Portão Clássico</h3><p>Portões</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão Condomínio" data-description="Portão para condomínio com design elegante.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+07" alt="Portão 07">
+            <div class="gallery-item-overlay"><h3>Portão Condomínio</h3><p>Portões</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="portoes">
+          <div class="gallery-item" data-title="Portão Pedonal" data-description="Portão pedonal integrado com design moderno.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Portão+08" alt="Portão 08">
+            <div class="gallery-item-overlay"><h3>Portão Pedonal</h3><p>Portões</p></div>
           </div>
         </div>
 
-        <!-- Item 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="gallery-item" data-category="estruturas" data-title="Estrutura Metálica Comercial" data-description="Estrutura robusta para galpão comercial com acabamento profissional.">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663086115249/FVJg8zKsxpkML3aNUkgoB7/galeria-estrutura-5bfuuZFF9BVBHiTHrqsBgR.webp" alt="Estrutura Metálica Comercial">
-            <div class="gallery-item-overlay">
-              <h3>Estrutura Metálica Comercial</h3>
-              <p>Estruturas</p>
-            </div>
+        <!-- ========== GRADES (8 imagens) ========== -->
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade de Proteção 01" data-description="Grade para janelas com design discreto.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+01" alt="Grade 01">
+            <div class="gallery-item-overlay"><h3>Grade Proteção 01</h3><p>Grades</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade Residencial" data-description="Grade residencial com pintura eletrostática.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+02" alt="Grade 02">
+            <div class="gallery-item-overlay"><h3>Grade Residencial</h3><p>Grades</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade Ornamental" data-description="Grade ornamental com detalhes artísticos.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+03" alt="Grade 03">
+            <div class="gallery-item-overlay"><h3>Grade Ornamental</h3><p>Grades</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade para Varanda" data-description="Grade para varanda com design moderno.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+04" alt="Grade 04">
+            <div class="gallery-item-overlay"><h3>Grade Varanda</h3><p>Grades</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade para Escada" data-description="Grade de proteção para escadas.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+05" alt="Grade 05">
+            <div class="gallery-item-overlay"><h3>Grade Escada</h3><p>Grades</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade Industrial" data-description="Grade de proteção para áreas industriais.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+06" alt="Grade 06">
+            <div class="gallery-item-overlay"><h3>Grade Industrial</h3><p>Grades</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade Basculante" data-description="Grade basculante para proteção de janelas.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+07" alt="Grade 07">
+            <div class="gallery-item-overlay"><h3>Grade Basculante</h3><p>Grades</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="grades">
+          <div class="gallery-item" data-title="Grade Corta-Fogo" data-description="Grade corta-fogo certificada.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Grade+08" alt="Grade 08">
+            <div class="gallery-item-overlay"><h3>Grade Corta-Fogo</h3><p>Grades</p></div>
           </div>
         </div>
 
-        <!-- Item 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="gallery-item" data-category="toldos" data-title="Cobertura em Policarbonato" data-description="Cobertura em policarbonato alveolar com proteção UV e design moderno.">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663086115249/FVJg8zKsxpkML3aNUkgoB7/galeria-cobertura-XoyDK2nWQM6sos2grbvJdy.webp" alt="Cobertura em Policarbonato">
-            <div class="gallery-item-overlay">
-              <h3>Cobertura em Policarbonato</h3>
-              <p>Toldos</p>
-            </div>
+        <!-- ========== ESTRUTURAS (8 imagens) ========== -->
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Estrutura Galpão 01" data-description="Estrutura metálica para galpão de 500m².">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+01" alt="Estrutura 01">
+            <div class="gallery-item-overlay"><h3>Galpão Industrial</h3><p>Estruturas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Mezanino 01" data-description="Mezanino metálico para otimização de espaço.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+02" alt="Estrutura 02">
+            <div class="gallery-item-overlay"><h3>Mezanino</h3><p>Estruturas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Cobertura Metálica" data-description="Cobertura metálica para área de lazer.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+03" alt="Estrutura 03">
+            <div class="gallery-item-overlay"><h3>Cobertura</h3><p>Estruturas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Estrutura Comercial" data-description="Estrutura para loja com mezanino.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+04" alt="Estrutura 04">
+            <div class="gallery-item-overlay"><h3>Estrutura Comercial</h3><p>Estruturas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Passarela Metálica" data-description="Passarela metálica para acesso seguro.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+05" alt="Estrutura 05">
+            <div class="gallery-item-overlay"><h3>Passarela</h3><p>Estruturas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Plataforma Elevatória" data-description="Plataforma para máquinas.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+06" alt="Estrutura 06">
+            <div class="gallery-item-overlay"><h3>Plataforma</h3><p>Estruturas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Telhado Metálico" data-description="Estrutura para telhado industrial.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+07" alt="Estrutura 07">
+            <div class="gallery-item-overlay"><h3>Telhado Metálico</h3><p>Estruturas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="estruturas">
+          <div class="gallery-item" data-title="Viga Metálica" data-description="Viga metálica para reforço estrutural.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Estrutura+08" alt="Estrutura 08">
+            <div class="gallery-item-overlay"><h3>Viga Metálica</h3><p>Estruturas</p></div>
           </div>
         </div>
 
-        <!-- Item 4 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="gallery-item" data-category="grades" data-title="Grade de Proteção" data-description="Grade de proteção com design seguro e elegante para janelas.">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663086115249/FVJg8zKsxpkML3aNUkgoB7/galeria-portao-mptd8XfaE5QBVqK59TjLNd.webp" alt="Grade de Proteção">
-            <div class="gallery-item-overlay">
-              <h3>Grade de Proteção</h3>
-              <p>Grades</p>
-            </div>
+        <!-- ========== TOLDOS (8 imagens) ========== -->
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="toldos">
+          <div class="gallery-item" data-title="Toldo Policarbonato 01" data-description="Toldo em policarbonato alveolar com proteção UV.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+01" alt="Toldo 01">
+            <div class="gallery-item-overlay"><h3>Toldo Policarbonato</h3><p>Toldos</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="toldos">
+          <div class="gallery-item" data-title="Cobertura Garagem" data-description="Cobertura para garagem em policarbonato.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+02" alt="Toldo 02">
+            <div class="gallery-item-overlay"><h3>Cobertura Garagem</h3><p>Toldos</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="toldos">
+          <div class="gallery-item" data-title="Toldo Retrátil" data-description="Toldo retrátil para áreas externas.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+03" alt="Toldo 03">
+            <div class="gallery-item-overlay"><h3>Toldo Retrátil</h3><p>Toldos</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="toldos">
+          <div class="gallery-item" data-title="Cobertura Churrasqueira" data-description="Cobertura para churrasqueira.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+04" alt="Toldo 04">
+            <div class="gallery-item-overlay"><h3>Cobertura Churrasco</h3><p>Toldos</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="toldos">
+          <div class="gallery-item" data-title="Toldo Fixo" data-description="Toldo fixo para entrada de estabelecimento.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+05" alt="Toldo 05">
+            <div class="gallery-item-overlay"><h3>Toldo Fixo</h3><p>Toldos</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="toldos">
+          <div class="gallery-item" data-title="Cobertura Piscina" data-description="Cobertura para área de piscina.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+06" alt="Toldo 06">
+            <div class="gallery-item-overlay"><h3>Cobertura Piscina</h3><p>Toldos</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="toldos">
+          <div class="gallery-item" data-title="Toldo Curvo" data-description="Toldo com design curvo e estrutura diferenciada.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+07" alt="Toldo 07">
+            <div class="gallery-item-overlay"><h3>Toldo Curvo</h3><p>Toldos</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="toldos">
+          <div class="gallery-item" data-title="Cobertura Acessos" data-description="Cobertura para acessos e calçadas.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Toldo+08" alt="Toldo 08">
+            <div class="gallery-item-overlay"><h3>Cobertura Acessos</h3><p>Toldos</p></div>
           </div>
         </div>
 
-        <!-- Item 5 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="gallery-item" data-category="estruturas" data-title="Mezanino Metálico" data-description="Mezanino em estrutura metálica para otimização de espaço.">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663086115249/FVJg8zKsxpkML3aNUkgoB7/galeria-estrutura-5bfuuZFF9BVBHiTHrqsBgR.webp" alt="Mezanino Metálico">
-            <div class="gallery-item-overlay">
-              <h3>Mezanino Metálico</h3>
-              <p>Estruturas</p>
-            </div>
+        <!-- ========== ESCADAS (8 imagens) ========== -->
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada Metálica 01" data-description="Escada industrial com corrimão e antiderrapante.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+01" alt="Escada 01">
+            <div class="gallery-item-overlay"><h3>Escada Industrial</h3><p>Escadas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada Caracol" data-description="Escada caracol em aço para ambientes compactos.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+02" alt="Escada 02">
+            <div class="gallery-item-overlay"><h3>Escada Caracol</h3><p>Escadas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada Residencial" data-description="Escada residencial com design moderno.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+03" alt="Escada 03">
+            <div class="gallery-item-overlay"><h3>Escada Residencial</h3><p>Escadas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada para Mezanino" data-description="Escada de acesso para mezanino.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+04" alt="Escada 04">
+            <div class="gallery-item-overlay"><h3>Escada Mezanino</h3><p>Escadas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada Marinheiro" data-description="Escada tipo marinheiro para acesso vertical.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+05" alt="Escada 05">
+            <div class="gallery-item-overlay"><h3>Escada Marinheiro</h3><p>Escadas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada em L" data-description="Escada em formato L para otimizar espaço.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+06" alt="Escada 06">
+            <div class="gallery-item-overlay"><h3>Escada L</h3><p>Escadas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada em U" data-description="Escada em formato U com patamar intermediário.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+07" alt="Escada 07">
+            <div class="gallery-item-overlay"><h3>Escada U</h3><p>Escadas</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="escadas">
+          <div class="gallery-item" data-title="Escada Reta" data-description="Escada reta com acabamento em aço escovado.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Escada+08" alt="Escada 08">
+            <div class="gallery-item-overlay"><h3>Escada Reta</h3><p>Escadas</p></div>
           </div>
         </div>
 
-        <!-- Item 6 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="gallery-item" data-category="toldos" data-title="Toldo Retrátil" data-description="Toldo retrátil em policarbonato para áreas externas.">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663086115249/FVJg8zKsxpkML3aNUkgoB7/galeria-cobertura-XoyDK2nWQM6sos2grbvJdy.webp" alt="Toldo Retrátil">
-            <div class="gallery-item-overlay">
-              <h3>Toldo Retrátil</h3>
-              <p>Toldos</p>
-            </div>
+        <!-- ========== MÓVEIS EM AÇO (8 imagens) ========== -->
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="moveis">
+          <div class="gallery-item" data-title="Mesa em Aço" data-description="Mesa industrial em aço para escritório.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+01" alt="Móvel 01">
+            <div class="gallery-item-overlay"><h3>Mesa em Aço</h3><p>Móveis</p></div>
           </div>
         </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="moveis">
+          <div class="gallery-item" data-title="Estante Metálica" data-description="Estante industrial para arquivo e estoque.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+02" alt="Móvel 02">
+            <div class="gallery-item-overlay"><h3>Estante Metálica</h3><p>Móveis</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="moveis">
+          <div class="gallery-item" data-title="Armário em Aço" data-description="Armário para ferramentas com portas.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+03" alt="Móvel 03">
+            <div class="gallery-item-overlay"><h3>Armário em Aço</h3><p>Móveis</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="moveis">
+          <div class="gallery-item" data-title="Banco Metálico" data-description="Banco em aço para áreas externas.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+04" alt="Móvel 04">
+            <div class="gallery-item-overlay"><h3>Banco Metálico</h3><p>Móveis</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="moveis">
+          <div class="gallery-item" data-title="Cadeira Industrial" data-description="Cadeira ergonômica em aço para indústria.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+05" alt="Móvel 05">
+            <div class="gallery-item-overlay"><h3>Cadeira Industrial</h3><p>Móveis</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="moveis">
+          <div class="gallery-item" data-title="Balcão Metálico" data-description="Balcão para recepção em aço.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+06" alt="Móvel 06">
+            <div class="gallery-item-overlay"><h3>Balcão Metálico</h3><p>Móveis</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="moveis">
+          <div class="gallery-item" data-title="Rack em Aço" data-description="Rack para equipamentos eletrônicos.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+07" alt="Móvel 07">
+            <div class="gallery-item-overlay"><h3>Rack em Aço</h3><p>Móveis</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 gallery-card" data-category="moveis">
+          <div class="gallery-item" data-title="Carrinho Metálico" data-description="Carrinho para transporte de materiais.">
+            <img src="https://placehold.co/600x400/1a1a1a/dc2626?text=Móvel+08" alt="Móvel 08">
+            <div class="gallery-item-overlay"><h3>Carrinho Metálico</h3><p>Móveis</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contador de imagens -->
+      <div class="text-center mt-4">
+        <p class="text-muted">Total: <span id="imageCount">48</span> projetos em nossa galeria</p>
       </div>
     </div>
   </section>
@@ -669,7 +665,7 @@
   <!-- CTA Section -->
   <section class="py-5 bg-light">
     <div class="container text-center">
-      <h2 class="display-5 fw-bold mb-4">Gostou de algum projeto?</h2>
+      <h2 class="fw-bold mb-4" style="font-size: 1.8rem;">Gostou de algum projeto?</h2>
       <p class="lead text-muted mb-4">Entre em contato conosco para discutir seu projeto e receber um orçamento personalizado.</p>
       <a href="https://wa.me/5516994234482" target="_blank" class="btn btn-primary">Solicitar Orçamento</a>
     </div>
@@ -678,10 +674,10 @@
   <!-- Gallery Modal -->
   <div class="modal-gallery" id="galleryModal">
     <div class="modal-gallery-content">
-      <button class="modal-close" id="modalCloseBtn"><i class="bi bi-x"></i></button>
+      <button class="modal-close" id="modalCloseBtn"><i class="bi bi-x-lg"></i></button>
       <img id="modalImage" src="" alt="" class="modal-image">
       <div>
-        <span class="badge bg-danger mb-3" id="modalCategory"></span>
+        <span class="badge bg-danger mb-3" id="modalCategory" style="background-color: var(--primary-color);"></span>
         <h3 id="modalTitle" class="h4 mb-3"></h3>
         <p id="modalDescription" class="text-muted"></p>
       </div>
@@ -733,7 +729,7 @@
   </footer>
 
   <!-- WhatsApp Button -->
-  <a href="https://wa.me/5516994234482" target="_blank" class="whatsapp-button" title="Clique para conversar conosco no WhatsApp">
+  <a href="https://wa.me/5516994234482" target="_blank" class="whatsapp-button" title="WhatsApp">
     <i class="bi bi-chat-dots"></i>
   </a>
 
@@ -741,7 +737,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
   <script>
-    // Menu Hamburguer - igual ao index.html
+    // Menu Hamburguer
     const menuToggle = document.getElementById('menuToggle');
     const navbarCollapse = document.getElementById('navbarCollapse');
     
@@ -749,93 +745,95 @@
       menuToggle.addEventListener('click', function() {
         navbarCollapse.classList.toggle('show');
       });
-      
-      const navLinks = navbarCollapse.querySelectorAll('.nav-link');
-      navLinks.forEach(link => {
+      navbarCollapse.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', function() {
           navbarCollapse.classList.remove('show');
         });
       });
     }
 
-    // Galeria Modal
+    // Filtro da Galeria
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryCards = document.querySelectorAll('.gallery-card');
+    const imageCountSpan = document.getElementById('imageCount');
+
+    function updateImageCount() {
+      let visible = 0;
+      galleryCards.forEach(card => {
+        if (card.style.display !== 'none') visible++;
+      });
+      if (imageCountSpan) imageCountSpan.textContent = visible;
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+        filterBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        let visibleCount = 0;
+        galleryCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'block';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        if (imageCountSpan) imageCountSpan.textContent = visibleCount;
+      });
+    });
+
+    // Modal da Galeria
     const modal = document.getElementById('galleryModal');
     const modalImage = document.getElementById('modalImage');
     const modalTitle = document.getElementById('modalTitle');
     const modalCategory = document.getElementById('modalCategory');
     const modalDescription = document.getElementById('modalDescription');
-    const closeBtn = document.querySelector('.modal-close');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+    function getCategoryName(category) {
+      const names = {
+        'portoes': 'Portões',
+        'grades': 'Grades',
+        'estruturas': 'Estruturas Metálicas',
+        'toldos': 'Toldos',
+        'escadas': 'Escadas',
+        'moveis': 'Móveis em Aço'
+      };
+      return names[category] || category;
+    }
 
     document.querySelectorAll('.gallery-item').forEach(item => {
       item.addEventListener('click', function() {
-        const img = this.querySelector('img');
         const title = this.getAttribute('data-title');
-        const category = this.getAttribute('data-category');
         const description = this.getAttribute('data-description');
-
-        modalImage.src = img.src;
-        modalImage.alt = title;
-        modalTitle.textContent = title;
+        const parentCard = this.closest('.gallery-card');
+        const category = parentCard ? parentCard.getAttribute('data-category') : '';
+        const imgSrc = this.querySelector('img')?.src || '';
         
-        let categoryName = '';
-        switch(category) {
-          case 'portoes': categoryName = 'Portões'; break;
-          case 'estruturas': categoryName = 'Estruturas Metálicas'; break;
-          case 'toldos': categoryName = 'Toldos'; break;
-          case 'grades': categoryName = 'Grades'; break;
-          default: categoryName = category;
-        }
-        modalCategory.textContent = categoryName;
-        modalDescription.textContent = description;
-
+        modalImage.src = imgSrc;
+        modalTitle.textContent = title || 'Projeto';
+        modalCategory.textContent = getCategoryName(category);
+        modalDescription.textContent = description || 'Detalhes do projeto';
+        
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
       });
     });
 
-    if (closeBtn) {
-      closeBtn.addEventListener('click', function() {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      });
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
     }
 
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      }
-    });
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && modal.classList.contains('active')) {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      }
-    });
-
-    // Filtro de Galeria
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const category = this.getAttribute('data-category');
-
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        this.classList.add('active');
-
-        galleryItems.forEach(item => {
-          if (category === 'todos' || item.getAttribute('data-category') === category) {
-            item.closest('.col-md-6').style.display = 'block';
-            setTimeout(() => item.classList.add('fade-in'), 10);
-          } else {
-            item.closest('.col-md-6').style.display = 'none';
-            item.classList.remove('fade-in');
-          }
-        });
-      });
-    });
+    modalCloseBtn?.addEventListener('click', closeModal);
+    modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal?.classList.contains('active')) closeModal(); });
+    
+    // Inicializar contador
+    updateImageCount();
   </script>
 </body>
 </html>
