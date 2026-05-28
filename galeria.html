@@ -141,28 +141,70 @@
     .footer-bottom { display: flex; flex-direction: column; gap: 1rem; font-size: 0.9rem; color: #9ca3af; }
     @media (min-width: 768px) { .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; } }
 
-    /* WhatsApp Button */
+    /* ============================================
+       WHATSAPP BUTTON - COM ÍCONE PNG E PULSANTE
+    ============================================ */
     .whatsapp-button {
       position: fixed;
       bottom: 1.5rem;
       right: 1.5rem;
       width: 60px;
       height: 60px;
-      background-color: #10b981;
-      color: var(--light-color);
+      background-color: #25d366;
       border-radius: 50%;
-      font-size: 1.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      transition: all 0.2s ease;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
       text-decoration: none;
       z-index: 999;
-      animation: pulse-soft 2s ease-in-out infinite;
+      animation: pulse-whatsapp 1.5s ease-in-out infinite;
     }
-    .whatsapp-button:hover { background-color: #059669; transform: scale(1.1); }
-    @keyframes pulse-soft { 0%, 100% { opacity: 1; } 50% { opacity: 0.8; } }
+
+    .whatsapp-button img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #128C7E;
+      transform: scale(1.15);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+      animation: none;
+    }
+
+    @keyframes pulse-whatsapp {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        background-color: #25d366;
+      }
+      50% {
+        transform: scale(1.08);
+        box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+        background-color: #20b859;
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        background-color: #25d366;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .whatsapp-button {
+        width: 50px;
+        height: 50px;
+        bottom: 1rem;
+        right: 1rem;
+      }
+      .whatsapp-button img {
+        width: 28px;
+        height: 28px;
+      }
+    }
 
     /* Dividers */
     .divider-red { height: 4px; background-color: var(--primary-color); width: 48px; margin: 1rem 0; }
@@ -283,7 +325,6 @@
     }
     @media (max-width: 576px) {
       .gallery-item-overlay { transform: translateY(0); background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent); padding: 0.75rem; }
-      .whatsapp-button { width: 50px; height: 50px; font-size: 1.25rem; }
     }
 
     /* Utility */
@@ -345,7 +386,6 @@
   <!-- Gallery Section -->
   <section class="py-5 bg-white">
     <div class="container">
-      <!-- Gallery Grid - 48 imagens (6 categorias x 8 imagens) -->
       <div class="row g-4" id="galleryGrid">
         
         <!-- ========== PORTÕES (8 imagens) ========== -->
@@ -724,9 +764,9 @@
     </div>
   </footer>
 
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/5516994234482" target="_blank" class="whatsapp-button" title="WhatsApp">
-    <i class="bi bi-chat-dots"></i>
+  <!-- WHATSAPP BUTTON - COM ÍCONE PNG E PULSANTE -->
+  <a href="https://wa.me/5516994234482" target="_blank" class="whatsapp-button" title="Fale conosco no WhatsApp">
+    <img src="imagens/whatsapp-icon.png" alt="WhatsApp">
   </a>
 
   <!-- Bootstrap JS -->

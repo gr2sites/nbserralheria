@@ -15,8 +15,6 @@
   <!-- Custom CSS -->
   <style>
     /* Design System: Industrial Minimalista Moderno */
-    /* Cores: Preto (#1a1a1a), Branco (#ffffff), Vermelho (#dc2626) */
-
     :root {
       --primary-color: #dc2626;
       --dark-color: #1a1a1a;
@@ -134,7 +132,7 @@
       color: var(--light-color);
     }
 
-    /* ===== MENU RESPONSIVO ===== */
+    /* Menu Responsivo */
     .navbar-toggler {
       background: none;
       border: 1px solid var(--gray-border);
@@ -248,41 +246,70 @@
       }
     }
 
-    /* WhatsApp Button */
+    /* ============================================
+       WHATSAPP BUTTON - COM ÍCONE PNG E PULSANTE
+    ============================================ */
     .whatsapp-button {
       position: fixed;
       bottom: 1.5rem;
       right: 1.5rem;
       width: 60px;
       height: 60px;
-      background-color: #10b981;
-      color: var(--light-color);
-      border: none;
+      background-color: #25d366;
       border-radius: 50%;
-      font-size: 1.5rem;
-      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      transition: all 0.2s ease;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
       text-decoration: none;
       z-index: 999;
-      animation: pulse-soft 2s ease-in-out infinite;
+      animation: pulse-whatsapp 1.5s ease-in-out infinite;
+    }
+
+    .whatsapp-button img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
     }
 
     .whatsapp-button:hover {
-      background-color: #059669;
-      transform: scale(1.1);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      background-color: #128C7E;
+      transform: scale(1.15);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+      animation: none;
     }
 
-    @keyframes pulse-soft {
-      0%, 100% {
-        opacity: 1;
+    /* Animação de pulsar */
+    @keyframes pulse-whatsapp {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        background-color: #25d366;
       }
       50% {
-        opacity: 0.8;
+        transform: scale(1.08);
+        box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+        background-color: #20b859;
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        background-color: #25d366;
+      }
+    }
+
+    /* Responsivo para mobile */
+    @media (max-width: 576px) {
+      .whatsapp-button {
+        width: 50px;
+        height: 50px;
+        bottom: 1rem;
+        right: 1rem;
+      }
+      .whatsapp-button img {
+        width: 28px;
+        height: 28px;
       }
     }
 
@@ -371,14 +398,13 @@
       margin-bottom: 1rem;
     }
 
-    /* Responsividade dos cards */
     @media (max-width: 768px) {
       .card-hover {
         margin-bottom: 1rem;
       }
     }
 
-    /* Hero Responsivo */
+    /* Hero */
     .hero {
       background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://d2xsxph8kpxj0f.cloudfront.net/310519663086115249/FVJg8zKsxpkML3aNUkgoB7/hero-serralheria-Y2hpYUy836dKMSh3PTNcrC.webp');
       background-size: cover;
@@ -409,7 +435,7 @@
       }
     }
 
-    /* Container responsivo */
+    /* Container */
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -425,7 +451,6 @@
       }
     }
 
-    /* Botões responsivos */
     @media (max-width: 576px) {
       .btn-primary, .btn-outline {
         padding: 0.6rem 1.2rem;
@@ -493,7 +518,6 @@
       </div>
 
       <div class="row g-4">
-        <!-- Service 1 -->
         <div class="col-md-4">
           <div class="card-hover">
             <div class="card-icon">
@@ -505,7 +529,6 @@
           </div>
         </div>
 
-        <!-- Service 2 -->
         <div class="col-md-4">
           <div class="card-hover">
             <div class="card-icon">
@@ -517,7 +540,6 @@
           </div>
         </div>
 
-        <!-- Service 3 -->
         <div class="col-md-4">
           <div class="card-hover">
             <div class="card-icon">
@@ -582,9 +604,9 @@
     </div>
   </footer>
 
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/5516994234482" target="_blank" class="whatsapp-button" title="Clique para conversar conosco no WhatsApp">
-    <i class="bi bi-chat-dots"></i>
+  <!-- WHATSAPP BUTTON - COM ÍCONE PNG E PULSANTE -->
+  <a href="https://wa.me/5516994234482" target="_blank" class="whatsapp-button" title="Fale conosco no WhatsApp">
+    <img src="imagens/whatsapp-icon.png" alt="WhatsApp">
   </a>
 
   <!-- Bootstrap JS -->
@@ -600,7 +622,6 @@
         navbarCollapse.classList.toggle('show');
       });
       
-      // Fechar menu ao clicar em um link
       const navLinks = navbarCollapse.querySelectorAll('.nav-link');
       navLinks.forEach(link => {
         link.addEventListener('click', function() {
