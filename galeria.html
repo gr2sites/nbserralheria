@@ -325,7 +325,6 @@
             <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
             <li class="nav-item"><a href="galeria.html" class="nav-link active">Galeria</a></li>
             <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
-            
           </ul>
         </div>
       </div>
@@ -346,9 +345,6 @@
   <!-- Gallery Section -->
   <section class="py-5 bg-white">
     <div class="container">
-      <!-- Filter Buttons -->
-     
-
       <!-- Gallery Grid - 48 imagens (6 categorias x 8 imagens) -->
       <div class="row g-4" id="galleryGrid">
         
@@ -765,25 +761,27 @@
       if (imageCountSpan) imageCountSpan.textContent = visible;
     }
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', function() {
-        const filter = this.getAttribute('data-filter');
-        filterBtns.forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        
-        let visibleCount = 0;
-        galleryCards.forEach(card => {
-          const category = card.getAttribute('data-category');
-          if (filter === 'all' || category === filter) {
-            card.style.display = 'block';
-            visibleCount++;
-          } else {
-            card.style.display = 'none';
-          }
+    if (filterBtns.length > 0) {
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          
+          let visibleCount = 0;
+          galleryCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+              card.style.display = 'block';
+              visibleCount++;
+            } else {
+              card.style.display = 'none';
+            }
+          });
+          if (imageCountSpan) imageCountSpan.textContent = visibleCount;
         });
-        if (imageCountSpan) imageCountSpan.textContent = visibleCount;
       });
-    });
+    }
 
     // Modal da Galeria
     const modal = document.getElementById('galleryModal');
